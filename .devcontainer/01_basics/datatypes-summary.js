@@ -30,3 +30,27 @@ const myFunction=function ()
     console.log("Hello world");
 }
 console.log(typeof outsideTemp);
+
+//+++++++++++++++++++++++++++++++++++
+
+//Stack (Primitive),Heap (Non-Primitive)
+
+let myYoutubeName="mschaware04@gmail.com";
+let anotherName=myYoutubeName;
+anotherName="msc shorts";
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne={
+    email:"user@google.com",
+    upi:"user@ybl"
+}
+
+let userTwo=userOne;
+
+userTwo.email="msc.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
