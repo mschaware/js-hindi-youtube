@@ -25,7 +25,7 @@ if(playGame)
 
 function validateGuess(guess)
 {
-    if(NaN(guess)){
+    if(isNaN(guess)){
         alert('Please enter a valid number');
     }
     else if(guess<1)
@@ -68,7 +68,7 @@ function checkGuess(guess)
 function displayGuess(guess)
 {
     userInput.value='';
-    guessSlot.innerHTML+=`${guess}  `;
+    guessSlot.innerHTML+=`${guess},  `;
     numGuess++;
     remaining.innerHTML=`${11-numGuess}`
 }
@@ -78,7 +78,7 @@ function displayMessage(message)
     lowOrHi.innerHTML=`<h2>${message}</h2>`
 }
 
-function newGame()
+function endGame()
 {
     userInput.value='';
     userInput.setAttribute('disabled','');
@@ -88,7 +88,8 @@ function newGame()
     playGame=false;
     newGame();
 }
-function endGame()
+
+function newGame()
 {
     const newGameButton=document.querySelector('#newGame');
     newGameButton.addEventListener('click',function(e){
@@ -99,6 +100,7 @@ function endGame()
         remaining.innerHTML=`${11-numGuess}`;
         userInput.removeAttribute("disabled");
         startOver.removeChild(p);
+
         playGame=true;
     });
 }
