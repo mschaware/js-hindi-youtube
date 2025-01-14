@@ -21,4 +21,9 @@ function user(username,loginCount,signedIn)
     this.username=username;
     this.loginCount=loginCount;
     this.signedIn=signedIn
+
+    return this;
 }
+const userone = new user("hitesh",12,true);
+const usertwo=new user("chaiaurcode",1,false);
+console.log(userone);
